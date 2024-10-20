@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <div *ngIf="registerForm.get('email')?.touched && registerForm.get('email')?.invalid">
+      <ion-text color="danger">Ingresa un correo válido.</ion-text>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <div *ngIf="registerForm.get('password')?.touched && registerForm.get('password')?.invalid">
+      <ion-text color="danger">
+        La contraseña debe tener al menos 6 caracteres.
+      </ion-text>
+    </div>
+
+    <ion-button expand="full" type="submit" [disabled]="registerForm.invalid">
+      Registrarse
+    </ion-button>
+  </form>
+
+  <!-- Opcional: enlaces a otras páginas -->
+  <ion-button expand="full" color="secondary" [routerLink]="['/auth/login']">
+    ¿Ya tienes cuenta? Inicia sesión
+  </ion-button>
+</ion-content>
+

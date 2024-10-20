@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Carga de crédito</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <ion-item>
+        <ion-input placeholder="correo" type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <div  [class.show]="loginForm.get('email')?.touched && loginForm.get('email')?.invalid" class="error-message">
+        Ingresa un correo válido.
+      </div>
+      <ion-item>
+        <ion-input placeholder="contraseña" type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <div [class.show]="loginForm.get('password')?.touched && loginForm.get('password')?.invalid" class="error-message">
+        La contraseña debe tener al menos 6 caracteres.
+      </div>
+
+      <ion-button style="font-family: Palatino, cursive;margin-top: 40px;" type="submit" [disabled]="loginForm.invalid" class="image-button">
+        <img src="../../../../assets/ingresar.png" alt="Iniciar Sesión">
+        Ingresar
+      </ion-button>
+
+      <div class="coin-gif-container">
+        <img src="../../../../assets/coin.gif" alt="Moneda girando" class="coin-gif">
+      </div>
+
+    </form>
+
+    <ion-fab vertical="top" horizontal="start" slot="fixed" class="fab-under-title">  <!-- Cambiado a "start" para estar alineado a la izquierda -->
+      <ion-fab-button>
+        <ion-icon name="ellipsis-horizontal"></ion-icon> <!-- Ícono principal -->
+      </ion-fab-button>
+
+      <!-- Lista de botones secundarios -->
+      <ion-fab-list side="end"> <!-- Desplegar hacia la derecha -->
+        <ion-fab-button (click)="quickLogin('admin@admin.com', '111111')">
+          <img src="assets/admin.png" alt="Admin" />
+        </ion-fab-button>
+        <ion-fab-button (click)="quickLogin('invitado@invitado.com', '222222')">
+          <img src="assets/invitado.png" alt="Invitado" />
+        </ion-fab-button>
+        <ion-fab-button (click)="quickLogin('usuario@usuario.com', '333333')">
+          <img src="assets/usuario.png" alt="Usuario" />
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+  </div>
+</ion-content>

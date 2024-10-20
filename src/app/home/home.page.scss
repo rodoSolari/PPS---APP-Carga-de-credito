@@ -1,27 +1,83 @@
-#container {
+ion-content {
+  --background: url('../../assets/background.png') no-repeat center center fixed;
+  --background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Asegura que ocupe toda la pantalla */
+  font-family: 'Racing Sans One', sans-serif;
+}
+
+.difficulty-container {
+  font-family: 'Racing Sans One', sans-serif;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 100%;
+  height: 75%; /* Ocupa toda la altura */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* Distribuye los botones uniformemente */
+  padding: 0 20px; /* Añade algo de padding lateral */
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-button.facil {
+  --background: #66c2a9; /* Color más claro para Fácil */
+  --color: rgb(0, 0, 0);
+  --border: 2px solid #000; /* Borde oscuro */
+  --border-radius: 10px;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-button.medio {
+  --background: #339988; /* Color intermedio para Medio */
+  --color: rgb(0, 0, 0);
+  --border: 2px solid #000;
+  --border-radius: 10px;
 }
 
-#container a {
-  text-decoration: none;
+ion-button.dificil {
+  --background: #006d80; /* Color más oscuro para Difícil */
+  --color: rgb(0, 0, 0);
+  --border: 2px solid #000;
+  --border-radius: 10px;
+}
+
+h2 {
+  font-family: 'Racing Sans One', sans-serif;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+ion-button {
+  --background: #006d80;
+  font-family: 'Racing Sans One', sans-serif;
+  --color: white;
+  height: 20%; /* Cada botón ocupará el 20% de la pantalla */
+  font-size: 3rem; /* Ajusta el tamaño del texto */
+  flex-grow: 1; /* Permite que los botones crezcan proporcionalmente */
+  --border: 5px solid #000; /* Borde oscuro */
+  --border-radius: 15px; /* Bordes redondeados opcionalmente */
+}
+
+ion-fab-button {
+  --border-radius: 50%;
+  min-width: 70px; /* Tamaño mínimo del FAB */
+  min-height: 70px; /* Tamaño mínimo del FAB */
+  width: 70px; /* Tamaño del botón */
+  height: 70px; /* Tamaño del botón */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-fab-button img {
+  width: 55px; /* Ajustar el tamaño de la imagen */
+  height: 55px; /* Ajustar el tamaño de la imagen */
+  object-fit: cover; /* Mantener proporciones de la imagen */
+}
+
+result-button{
+  text-align: center;
+  justify-content: center;
 }

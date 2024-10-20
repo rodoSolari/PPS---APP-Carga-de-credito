@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Botón de cerrar sesión (si aún lo necesitas) -->
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="logout()">
+      <img src="../../assets/salida.png" alt="Log out" />
+    </ion-fab-button>
+  </ion-fab>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <!-- Contenedor para el botón de "Ver Resultados" y título -->
+  <div class="header-container">
+    <!-- Botón "Ver Resultados" -->
+    <ion-button class="result-button" (click)="goToScores()">Ver Resultados</ion-button>
+    <!-- Título -->
+    <h2>Elija la dificultad</h2>
   </div>
+
+  <!-- Opciones de dificultad -->
+  <div class="difficulty-container">
+    <ion-button expand="block" class="facil" (click)="setDifficulty('facil')">Fácil</ion-button>
+    <ion-button expand="block" class="medio" (click)="setDifficulty('medio')">Medio</ion-button>
+    <ion-button expand="block" class="dificil" (click)="setDifficulty('dificil')">Difícil</ion-button>
+  </div>
+
 </ion-content>

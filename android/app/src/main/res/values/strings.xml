@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">carga de créditos</string>
+    <string name="title_activity_main">carga de creditos</string>
+    <string name="package_name">io.ionic.cargacreditos</string>
+    <string name="custom_url_scheme">io.ionic.cargacreditos</string>
+</resources>

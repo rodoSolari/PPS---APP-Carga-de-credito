@@ -1,0 +1,51 @@
+<ion-content [fullscreen]="true">
+  <br /><br />
+  <ion-text class="ion-text-center title">
+    <h1 class="scan-instruction">Carga Créditos</h1>
+  </ion-text>
+
+  <div class="credits-container">
+    <ion-card color="dark" class="card">
+      <ion-card-header class="card-container">
+        <ion-card-title class="credits-title">
+          <ng-container *ngIf="!loadingCredits; else creditsContent">
+            <img src="../../assets/icon/logo.png" class="rotating-logo" />
+          </ng-container>
+          <ng-template #creditsContent>
+            {{ totalCredits }}
+          </ng-template>
+        </ion-card-title>
+        <ion-card-subtitle class="credits-subtitle">Créditos</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
+  <div class="button-container">
+    <ion-button
+      expand="full"
+      color="tertiary"
+      class="reset-button shadow-button"
+      (click)="confirmResetCredits()"
+    >
+      Limpiar Créditos
+    </ion-button>
+  </div>
+
+  <div class="img-row">
+    <div class="instruction-container">
+      <ion-text class="scan-instruction">
+        <h2>Presiona el ícono para escanear el código QR</h2>
+      </ion-text>
+      <img (click)="scan()" src="../../assets/codigo-qr.png" class="qr-icon" />
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="logout()">
+        <img src="../../assets/ingresar.png" alt="Salir" class="logout-icon" />
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

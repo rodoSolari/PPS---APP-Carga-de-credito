@@ -1,0 +1,207 @@
+ion-content {
+  --background: url('../../../assets/cash.png') repeat center center fixed;
+  --background-size: cover; /* Ajusta el fondo para que cubra toda la pantalla */
+}
+
+.title {
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.credits-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #6a1b9a, #8a2be2);
+}
+
+.credits-title {
+  font-size: 70px;
+  font-weight: bold;
+  color: #e6e6fa;
+  text-align: center;
+}
+
+ion-spinner {
+  width: 50px;
+  height: 50px;
+  --color: #9370db; /* Cambia el color del spinner si lo deseas */
+}
+.credits-subtitle {
+  font-size: 18px;
+  font-weight: normal;
+  color: #9370db;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Centra el botón horizontalmente */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.reset-button {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 15px;
+  --background: #8a2be2;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.reset-button:hover {
+  transform: scale(1.05); /* Efecto hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Aumentar la sombra al pasar el mouse */
+}
+
+.shadow-button {
+  border: none;
+  background-color: #9370db;
+  color: white;
+  font-size: 18px;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.shadow-button:hover {
+  background-color: #6a1b9a;
+}
+.instruction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-row {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.img-row img {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.scan-instruction {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  padding: 10px;
+  background-color: rgba(138, 43, 226, 0.7); /* Fondo violeta transparente */
+  border: 2px solid #9370db; /* Borde violeta más claro */
+  border-radius: 8px; /* Esquinas redondeadas */
+  text-align: center; /* Alineación centrada del texto */
+}
+
+.qr-icon {
+  width: 130px;
+  height: 130px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.qr-icon:hover {
+  transform: scale(1.1);
+}
+
+ion-toolbar {
+  --background: #8A2BE2; /* Footer color */
+}
+
+ion-footer {
+  --background: #8A2BE2; /* Footer color */
+}
+
+ion-icon {
+  font-size: 24px;
+  color: white;
+}
+
+.logout-icon {
+  width: 36px;
+  height: 36px;
+}
+
+
+.swal-title-bold {
+  font-weight: 700; /* Hacer el título más grueso */
+  font-size: 1.5em; /* Ajustar el tamaño si es necesario */
+  font-family: 'Poppins', sans-serif; /* O la fuente que prefieras */
+}
+
+/* Estilo para el contenido del Swal */
+.swal-text-bold {
+  font-weight: 600; /* Hacer el texto del contenido más grueso */
+  font-size: 1.2em; /* Ajustar el tamaño si es necesario */
+}
+
+/* Estilo para el botón del Swal */
+.swal-button-bold {
+  font-weight: 700; /* Hacer el texto del botón más grueso */
+  font-size: 1.1em; /* Ajustar el tamaño si es necesario */.spinner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* O el tamaño adecuado según tu diseño */
+}
+
+.spinner-logo {
+  width: 100px; /* Ajusta el tamaño del logo */
+  height: 100px;
+  margin-top: 20px;
+  object-fit: contain;
+}
+
+  padding: 10px 20px; /* Ajustar el padding si es necesario */
+}
+
+
+.spinner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* O el tamaño adecuado según tu diseño */
+}
+
+.spinner-logo {
+  width: 100px; /* Ajusta el tamaño del logo */
+  height: 100px;
+  margin-top: 20px;
+  object-fit: contain;
+}
+
+
+.rotating-logo {
+  width: 80px; /* Ajusta el tamaño del logo */
+  height: 80px;
+  animation: rotate 1.5s linear infinite; /* Animación de rotación */
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
